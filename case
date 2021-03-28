@@ -1,0 +1,93 @@
+import turtle
+
+
+
+try:
+  N = int(input("Пожалуйста, введите количество шестиугольников, располагаемых в ряд:"))
+  def number(N):
+    while True:
+        if N > 20 or N < 4:
+          N = int(input("Оно должно быть от 4 до 20. Пожалуйста, повторите попытку:"))
+          return number(N)
+except ValueError:
+  print(N=int(input('Оно должно быть от 4 до 20. Пожалуйста, повторите попытку:')))
+print("Допустимые цвета заливки:\nкрасный\nсиний\nзеленый\nжелтый\nоранжевый\nпурпурный\nрозовый")
+color = input("Пожалуйста, введите цвет:")
+
+def get_color_choice(color):
+    while True:
+      if color != 'красный' and color != 'синий' and color != 'зеленый' and color != 'желтый' and color != 'оранжевый' and color != 'пурпурный' and color != 'розовый':
+        print(color, end='')
+        color = input(' не является верным значением. Пожалуйста, повторите попытку:')
+        color1 = input("Пожалуйста, введите цвет:")
+        if color1 != 'красный' and color1 != 'синий' and color1 != 'зеленый' and color1 != 'желтый' and color1 != 'оранжевый' and color1 != 'пурпурный' and color1 != 'розовый':
+            print(color1, end='')
+            color1 = input(' не является верным значением. Пожалуйста, повторите попытку:')
+            return get_color_choice(color)
+turtle.speed(80)
+def hexagon():
+  turtle.left(30)
+  for h in range(1):
+    if True:
+      for m in range(n):
+        if m%2==0:
+          for l in range(n):
+            if l%2==0:
+              for k in range(8):
+                turtle.begin_fill()
+                turtle.color('white','pink')
+                turtle.forward(100)
+                turtle.right(60)
+              turtle.end_fill()
+              turtle.left(120)
+            else:
+              for k in range(8):
+                turtle.begin_fill()
+                turtle.color('white','red')
+                turtle.forward(100)
+                turtle.right(60)
+              turtle.end_fill()
+              turtle.left(120)
+          turtle.right(120)
+          turtle.forward(100)
+          turtle.right(60)
+          turtle.forward(100)
+          turtle.left(60)
+          turtle.forward(100)
+          turtle.right(60)
+        else:
+          for l in range(n):
+            if l%2==0:
+              for k in range(8):
+                turtle.begin_fill()
+                turtle.color('white','pink')
+                turtle.forward(100)
+                turtle.right(60)
+              turtle.end_fill()
+              turtle.left(120)
+            else:
+              for k in range(8):
+                turtle.begin_fill()
+                turtle.color('white','red')
+                turtle.forward(100)
+                turtle.right(60)
+              turtle.end_fill()
+              turtle.left(120)
+          turtle.right(120)
+          turtle.forward(100)
+          turtle.right(60)
+          turtle.forward(100)
+          turtle.left(60)
+          turtle.forward(100)
+          turtle.right(60)
+          turtle.left(240)
+          turtle.forward(100)
+          turtle.right(60)
+          turtle.forward(100)
+          turtle.left(60)
+          turtle.forward(100)
+          turtle.left(60)
+          turtle.forward(100)
+          turtle.left(60)
+n=int(input())
+print(hexagon())
